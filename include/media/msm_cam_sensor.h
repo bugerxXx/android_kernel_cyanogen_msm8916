@@ -1,5 +1,7 @@
 #ifdef CONFIG_WT86518_CAMERA
 #include "msm_cam_sensor_wt86518.h"
+#elif CONFIG_WT86528_CAMERA
+#include "msm_cam_sensor_wt86518.h"
 #else
 #ifndef __LINUX_MSM_CAM_SENSOR_H
 #define __LINUX_MSM_CAM_SENSOR_H

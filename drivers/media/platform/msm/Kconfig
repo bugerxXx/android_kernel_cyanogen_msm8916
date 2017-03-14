@@ -40,11 +40,21 @@ menuconfig WT86518_CAMERA
 	---help---
           Enable the old Lenovo A6000 (WT86518) camera code
 
+menuconfig WT86528_CAMERA
+	bool "Lenovo A6010 (WT86528) variant of the camera stack"
+	depends on ARCH_MSM && VIDEO_V4L2 && I2C && MSMB_CAMERA && MACH_WT86518
+	default n
+	---help---
+          Enable the old Lenovo A6010 (WT86528) camera code
+
 if MSMB_CAMERA
 if WT86518_CAMERA
 source "drivers/media/platform/msm/camera_wt86518_v2/Kconfig"
 endif
-if !WT86518_CAMERA
+if WT86528_CAMERA
+source "drivers/media/platform/msm/camera_wt86528_v2/Kconfig"
+endif
+if !WT86518_CAMERA && !WT86528_CAMERA
 source "drivers/media/platform/msm/camera_v2/Kconfig"
 endif
 endif # MSMB_CAMERA

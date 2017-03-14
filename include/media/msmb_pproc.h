@@ -1,5 +1,7 @@
 #ifdef CONFIG_WT86518_CAMERA
 #include "msmb_pproc_wt86518.h"
+#elif CONFIG_WT86528_CAMERA
+#include "msmb_pproc_wt86518.h"
 #else
 #ifndef __MSMB_PPROC_H
 #define __MSMB_PPROC_H

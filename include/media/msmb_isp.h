@@ -11,6 +11,8 @@
  */
 #ifdef CONFIG_WT86518_CAMERA
 #include "msmb_isp_wt86518.h"
+#elif CONFIG_WT86528_CAMERA
+#include "msmb_isp_wt86518.h"
 #else
 #ifndef __MSMB_ISP__
 #define __MSMB_ISP__
