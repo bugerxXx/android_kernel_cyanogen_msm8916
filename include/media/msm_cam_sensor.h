@@ -1,6 +1,7 @@
 #ifdef CONFIG_WT86518_CAMERA
 #include "msm_cam_sensor_wt86518.h"
-#elif CONFIG_WT86528_CAMERA
+#endif /* CONFIG_WT86518_CAMERA */
+#ifdef CONFIG_WT86528_CAMERA
 #include "msm_cam_sensor_wt86518.h"
 #else
 #ifndef __LINUX_MSM_CAM_SENSOR_H
@@ -785,4 +786,4 @@ struct msm_flash_cfg_data_t32 {
 #endif
 
 #endif /* __LINUX_MSM_CAM_SENSOR_H */
-#endif /* CONFIG_WT86518_CAMERA */
+#endif /* CONFIG_WT86528_CAMERA */

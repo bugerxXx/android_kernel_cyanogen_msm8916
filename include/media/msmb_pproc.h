@@ -1,6 +1,7 @@
 #ifdef CONFIG_WT86518_CAMERA
 #include "msmb_pproc_wt86518.h"
-#elif CONFIG_WT86528_CAMERA
+#endif /* CONFIG_WT86518_CAMERA */
+#ifdef CONFIG_WT86528_CAMERA
 #include "msmb_pproc_wt86518.h"
 #else
 #ifndef __MSMB_PPROC_H
@@ -432,4 +433,4 @@ struct msm_camera_v4l2_ioctl32_t {
 #endif
 
 #endif /* __MSMB_PPROC_H */
-#endif /* CONFIG_WT86518_CAMERA */
+#endif /* CONFIG_WT86528_CAMERA */

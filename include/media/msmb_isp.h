@@ -11,7 +11,8 @@
  */
 #ifdef CONFIG_WT86518_CAMERA
 #include "msmb_isp_wt86518.h"
-#elif CONFIG_WT86528_CAMERA
+#endif /* CONFIG_WT86518_CAMERA */
+#ifdef CONFIG_WT86528_CAMERA
 #include "msmb_isp_wt86518.h"
 #else
 #ifndef __MSMB_ISP__
@@ -617,4 +618,4 @@ struct msm_isp_event_data32 {
 	_IOWR('V', BASE_VIDIOC_PRIVATE+21, struct msm_isp_event_data)
 #endif
 #endif /* __MSMB_ISP__ */
-#endif /* CONFIG_WT86518_CAMERA */
+#endif /* CONFIG_WT86528_CAMERA */
