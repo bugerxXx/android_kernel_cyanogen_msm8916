@@ -15,7 +15,6 @@
 #include "dsi-panel-hx8394d-720p-video.dtsi" 
 #include "msm-pm8916-wt86528.dtsi"
 #include "msm8916-camera-sensor-wt86528.dtsi"
-#include "msm8916-pinctrl-wt86528.dtsi"
 
 &tlmm_pinmux {
 	epl2182_int_pin {
@@ -291,6 +290,24 @@
 			retain-state-suspended;
 		};
 	};
+
+	fan-otg-pin {
+			qcom,pins = <&gp 114>;
+			qcom,num-grp-pins = <1>;
+			qcom,pin-func = <0>;
+			label = "fan-otg-pin";                                         
+			otg_pin_high: otg_pin_high {
+				drive-strength = <2>;
+				bias-pull-up;
+				output-high;
+			};
+			otg_pin_low: otg_pin_low {
+				drive-strength = <2>;
+				bias-pull-down;
+				output-low;      
+				
+			};
+		};
 
 	sound {
 		compatible = "qcom,msm8x16-audio-codec";
